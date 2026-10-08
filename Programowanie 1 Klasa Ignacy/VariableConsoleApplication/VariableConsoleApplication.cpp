@@ -1,9 +1,7 @@
-// VariableConsoleApplication.cpp 
+﻿// VariableConsoleApplication.cpp 
 
 #include <iostream>
 /*
-* Wykładzina do pokoju
-Wczytaj długość i szerokość prostokątnego pokoju w metrach oraz cenę metra kwadratowego wykładziny. Oblicz powierzchnię podłogi oraz koszt wykładziny potrzebnej do jej pokrycia. Pomiń zapas i odpady przy docinaniu.
 
 * Podlewanie trawnika
 Zraszacz podlewa obszar w kształcie koła. Wczytaj jego zasięg w metrach, czyli odległość od zraszacza do najdalszego podlewanego punktu. Oblicz powierzchnię podlewanego trawnika.
@@ -102,12 +100,34 @@ void task4()
 	std::cout << "Po zamianie: " << firstNumber << ' ' << secondNumber << '\n';
 }
 
+//*Wykładzina do pokoju
+//Wczytaj długość i szerokość prostokątnego pokoju w metrach oraz cenę metra kwadratowego wykładziny.
+//Oblicz powierzchnię podłogi oraz koszt wykładziny potrzebnej do jej pokrycia.Pomiń zapas i odpady przy docinaniu.
+void task5()
+{
+	int width, height;
+	std::cout << "Podaj d︃ługo︃ść:\n";
+	std::cin >> width;
+	std::cout << "Podaj szeroko︃ść:\n";
+	std::cin >> height;
+
+	float pricePerMeterSq;
+	std::cout << "Podaj koszt metra kwadratowego wyk︃ładziny:\n";
+	std::cin >> pricePerMeterSq;
+
+	int areaOfRoom;
+	areaOfRoom = width * height;
+
+	float price;
+	price = areaOfRoom * pricePerMeterSq;
+
+	std::cout << "Pole pokoju to: " << areaOfRoom << "\n";
+	std::cout << "Koszt wyk︃ładziny to: " << price << "\n";
+}
+
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
 
-	task4
-	
-	
-	();
+	task5();
 }
