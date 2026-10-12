@@ -3,9 +3,6 @@
 #include <iostream>
 /*
 
-* Podlewanie trawnika
-Zraszacz podlewa obszar w kształcie koła. Wczytaj jego zasięg w metrach, czyli odległość od zraszacza do najdalszego podlewanego punktu. Oblicz powierzchnię podlewanego trawnika.
-
 * Koszt podróży samochodem
 Wczytaj długość trasy w kilometrach, średnie spalanie samochodu w litrach na 100 km oraz cenę litra paliwa. Oblicz ilość paliwa potrzebną do przejechania trasy oraz koszt tego paliwa.
 
@@ -131,3 +128,65 @@ int main()
 
 	task5();
 }
+
+//Podlewanie trawnika
+//Zraszacz podlewa obszar w kształcie koła.Wczytaj jego zasięg w metrach,
+// czyli odległość od zraszacza do najdalszego podlewanego punktu
+// .Oblicz powierzchnię podlewanego trawnika.
+void task6()
+{
+	int radius;
+	std::cout << "Podaj zasięg zraszacza:\n";
+	std::cin >> radius;
+
+	int area;
+	area = radius * radius * 3.14;
+
+	std::cout << "Powierzchnia: " << area << "m2\n";
+
+
+}
+
+//* Koszt podróży samochodem
+//Wczytaj długość trasy w kilometrach, średnie spalanie samochodu w litrach na 100 km 
+// oraz cenę litra paliwa.Oblicz ilość paliwa potrzebną do przejechania trasy oraz koszt tego paliwa.
+void task7()
+{
+	int distance, averageFuelUsed, pricePerLiter;
+	std::cout << "Podaj dystans:\n";
+	std::cin >> distance;
+	std::cout << "Podaj średnie spalanie paliwa:\n";
+	std::cin >> averageFuelUsed;
+	std::cout << "Podaj cene za litr paliwa:\n";
+	std::cin >> pricePerLiter;
+
+	float fuelNeeded;
+	fuelNeeded = distance * averageFuelUsed / 100.0;
+
+	float costOfAdventure;
+	costOfAdventure = fuelNeeded * pricePerLiter;
+
+	std::cout << "Ilość potrzebnego paliwa wynosi: " << fuelNeeded << "L\n";
+	std::cout << "Cena za podróż: " << costOfAdventure << "zl\n";
+}
+
+//* Zakup z rabatem
+//Wczytaj cenę towaru przed obniżką oraz wysokość 
+// rabatu w procentach.Oblicz cenę po obniżce oraz zaoszczędzoną kwotę.
+void task8()
+{
+	int priceBeforeDiscount, discountAmmountInPrecents;
+	std::cout << "Podaj cene przed obniżką:\n";
+	std::cin >> priceBeforeDiscount;
+	std::cout << "Podaj cene obniżki przed:\n";
+	std::cin >> discountAmmountInPrecents;
+
+	float savedMoney;
+	savedMoney = discountAmmountInPrecents / 100.0 * priceBeforeDiscount;
+
+	float priceAfterDiscount;
+	priceAfterDiscount = priceBeforeDiscount * savedMoney;
+
+	std::cout << "Ilość zaoszczędzonej kwoty wynosi: " << savedMoney << "zl\n";
+	std::cout << "Cena po obniżce wynosi: " << priceAfterDiscount << "zl\n";
+}0
