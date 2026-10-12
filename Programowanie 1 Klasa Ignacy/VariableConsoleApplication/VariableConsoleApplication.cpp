@@ -3,8 +3,6 @@
 #include <iostream>
 /*
 
-* Koszt podróży samochodem
-Wczytaj długość trasy w kilometrach, średnie spalanie samochodu w litrach na 100 km oraz cenę litra paliwa. Oblicz ilość paliwa potrzebną do przejechania trasy oraz koszt tego paliwa.
 
 * Zakup z rabatem
 Wczytaj cenę towaru przed obniżką oraz wysokość rabatu w procentach. Oblicz cenę po obniżce oraz zaoszczędzoną kwotę.
@@ -122,13 +120,6 @@ void task5()
 	std::cout << "Koszt wyk︃ładziny to: " << price << "\n";
 }
 
-int main()
-{
-	setlocale(LC_CTYPE, "polish");
-
-	task5();
-}
-
 //Podlewanie trawnika
 //Zraszacz podlewa obszar w kształcie koła.Wczytaj jego zasięg w metrach,
 // czyli odległość od zraszacza do najdalszego podlewanego punktu
@@ -139,12 +130,10 @@ void task6()
 	std::cout << "Podaj zasięg zraszacza:\n";
 	std::cin >> radius;
 
-	int area;
+	float area;
 	area = radius * radius * 3.14;
 
 	std::cout << "Powierzchnia: " << area << "m2\n";
-
-
 }
 
 //* Koszt podróży samochodem
@@ -178,15 +167,33 @@ void task8()
 	int priceBeforeDiscount, discountAmmountInPrecents;
 	std::cout << "Podaj cene przed obniżką:\n";
 	std::cin >> priceBeforeDiscount;
-	std::cout << "Podaj cene obniżki przed:\n";
+	std::cout << "Podaj rabat w procentach:\n";
 	std::cin >> discountAmmountInPrecents;
 
 	float savedMoney;
 	savedMoney = discountAmmountInPrecents / 100.0 * priceBeforeDiscount;
-
+	
 	float priceAfterDiscount;
-	priceAfterDiscount = priceBeforeDiscount * savedMoney;
+	priceAfterDiscount = priceBeforeDiscount - savedMoney;
 
 	std::cout << "Ilość zaoszczędzonej kwoty wynosi: " << savedMoney << "zl\n";
-	std::cout << "Cena po obniżce wynosi: " << priceAfterDiscount << "zl\n";
-}0
+	std::cout << "Cena po obniżce: " << priceAfterDiscount << "zl\n";
+}
+//Koszt podróży samochodem
+//Wczytaj długość trasy w kilometrach, średnie spalanie samochodu w litrach na 100 km oraz cenę litra paliwa.
+// Oblicz ilość paliwa potrzebną do przejechania trasy oraz koszt tego paliwa.
+void task9()
+{
+
+
+
+
+}
+
+
+int main()
+{
+	setlocale(LC_CTYPE, "polish");
+
+	task9();
+}
