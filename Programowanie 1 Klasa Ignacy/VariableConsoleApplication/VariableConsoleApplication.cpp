@@ -4,8 +4,7 @@
 /*
 
 
-* Zakup z rabatem
-Wczytaj cenę towaru przed obniżką oraz wysokość rabatu w procentach. Oblicz cenę po obniżce oraz zaoszczędzoną kwotę.
+* 
 
 * Koszt zużycia energii
 Wczytaj moc urządzenia w watach, czas jego pracy w godzinach oraz cenę jednej kilowatogodziny energii elektrycznej. Oblicz zużycie energii w kilowatogodzinach oraz koszt pracy urządzenia. Przyjmij, że urządzenie przez cały ten czas pracuje z podaną mocą.
@@ -184,16 +183,41 @@ void task8()
 // Oblicz ilość paliwa potrzebną do przejechania trasy oraz koszt tego paliwa.
 void task9()
 {
+	int powerInWatts, timeInHours, pricePerKWh;
+	std::cout << "Podaj moc urządzenia w watach:\n";
+	std::cin >> powerInWatts;
+	std::cout << "Podaj czas pracy w godzinach:\n";
+	std::cin >> timeInHours;
+	std::cout << "Podaj cene za 1 kWh:\n";
+	std::cin >> pricePerKWh;
+
+	float powerUsage;
+	powerUsage = powerInWatts / 1000.0 * timeInHours;
+
+	float totalCost;
+	totalCost = powerUsage * pricePerKWh;
+
+	std::cout << "Zużycie energii wynosi: " << powerUsage << "kWh\n";
+	std::cout << "Koszt calkowity wynosi: " << totalCost << "zl\n";
+
+}
+
+//Zakup z rabatem
+//Wczytaj cenę towaru przed obniżką oraz wysokość rabatu w procentach.Oblicz cenę po obniżce oraz zaoszczędzoną kwotę.
+void task10()
+{
+
+
+
 
 
 
 
 }
 
-
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
 
-	task9();
+	task10();
 }
