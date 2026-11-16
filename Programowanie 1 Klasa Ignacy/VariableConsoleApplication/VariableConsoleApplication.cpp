@@ -206,11 +206,17 @@ void task9()
 //Wczytaj cenę towaru przed obniżką oraz wysokość rabatu w procentach.Oblicz cenę po obniżce oraz zaoszczędzoną kwotę.
 void task10()
 {
+	float originalPrice, discountPercentage ;
+	std::cout << "Podaj cene przed obniżką:\n";
+	std::cin >> originalPrice;
 
+	std::cout << "Podaj wysokość rabatu w procentach:\n";
+	std::cin >> discountPercentage;
 
-
-
-
+	float discountAmount = originalPrice * (discountPercentage / 100.0);
+	float price = originalPrice - discountAmount;
+	std::cout << "cena po obniżce wynosi: " << price << "\n";
+	std::cout << "zaoszczędzona kwota wynosi: " << discountAmount << "\n";
 
 
 }
